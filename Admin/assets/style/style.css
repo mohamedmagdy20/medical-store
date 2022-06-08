@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  background-color: #fafafa;
+}
+.header {
+  padding-top: 70px;
+}
+.header-text a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+.header-text a:hover {
+  color: #0e8ce4;
+  transition: ease-in-out 0.3s;
+}
+.navbar-light .navbar-brand {
+  color: #0e8ce4 !important;
+  font-size: 25px !important;
+}
+.navbar-light .navbar-toggler {
+  border-color: #e0e0e0 !important;
+}
+.navbar .form-control {
+  width: 300px;
+}
+.cart {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+}
+.count {
+  margin-left: -8px;
+}
+.cart-img .bound {
+  text-align: center;
+  border-radius: 50%;
+  border: 0.3px solid;
+  width: 25px;
+  height: 25px;
+  background: #0e8ce4;
+  color: #fff;
+}
+.products {
+  background-color: #fafafa;
+}
+
+.up {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  margin-right: 3px;
+  z-index: 100;
+}
+.arrow-up {
+  background-color: #0e8ce4;
+  height: 30px;
+  width: 36px;
+  text-align: center;
+}
+.arrow-up:hover {
+  background-color: #fff;
+  transition: ease-in-out 0.3s;
+}
+.up img {
+  width: 20px;
+}
+.product-img img:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+.link :hover {
+  color: #0e8ce4 !important;
+  transition: ease-in-out 0.4s;
+}
+.link img {
+  height: 200px;
+}
+.prod {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+.counter .form-control {
+  border: 0.2px solid #ced4da !important;
+  width: 15% !important;
+}
+.width {
+  width: 150px;
+}
+.table .t-head {
+  background: #0078ff;
+  border-radius: 3px;
+  padding: 20px 30px;
+  margin-bottom: 5px;
+}
+
+.table .t-row {
+  background: #95a5a6;
+  border-radius: 3px;
+  padding: 20px 30px;
+  margin-bottom: 5px;
+}
+.table .t-head .head {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.table .t-row {
+  font-size: 20px;
+  font-weight: bold;
+}
+.table > :not(:first-child) {
+  border-top: 0 !important;
+}
+.t-row .head img {
+  height: 80px;
+}
