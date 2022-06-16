@@ -5,17 +5,20 @@ use Admin\Medicalstore\Models\Orders_details;
 
 require "inc/header.php";
 $ord = new Orders;
-$orders = $ord->selectAll("orders.name,orders.address,orders.email,orders.phone,orders.created_at,SUM(order_details.qty* products.price) AS total,products.name AS prodName,img");
+// $orders = $ord->selectAll("orders.name,orders.address,orders.email,orders.phone,orders.created_at,SUM(order_details.qty* products.price) AS total,products.name AS prodName,img");
 $order_details = [];
 $OrderDetails = new Orders_details;
-foreach ($orders as $order) {
-  // $details = [];
-  // $details = $OrderDetails->selectAll("orders.name,orders.address,orders.email,orders.phone,orders.created_at,SUM(order_details.qty* products.price) AS total,products.name AS prodName,img");
-  // $details = "SELECT products.name, products.img FROM order_details INNER JOIN products ON products.id = order_details.products_id  "
-  // array_push($order_details, $details);
-}
-// echo"<pre>";
+$orders = $OrderDetails->selectAll("orders.name,orders.address,orders.email,orders.phone,orders.created_at,SUM(order_details.qty* products.price) AS total,products.name AS prodName,img");
 // print_r($orders);
+// dies;
+// foreach ($orders as $order) {
+//   // $details = [];
+//   // $details = $OrderDetails->selectAll("orders.name,orders.address,orders.email,orders.phone,orders.created_at,SUM(order_details.qty* products.price) AS total,products.name AS prodName,img");
+//   // $details = "SELECT products.name, products.img FROM order_details INNER JOIN products ON products.id = order_details.products_id  "
+//   // array_push($order_details, $details);
+// }
+// // echo"<pre>";
+// // print_r($orders);
 ?>
 <a href="<?= AURL; ?>index.php">Back</a>
 <div class="pt-5">
@@ -45,9 +48,7 @@ foreach ($orders as $order) {
           <td><?= $prod['total'] ?></td>
           <td><?= $prod['prodName'] ?></td>
           <td>
-            <!-- <img width="100px" src="<?= URL . "uploads/" . $prod['img']; ?>" alt=""> -->
-            <?php foreach ($orders as $index => $prod) : ?>
-            <?php endforeach; ?>
+            <img width="100px" src="<?= URL . "uploads/" . $prod['img']; ?>" alt="">
 
           </td>
 
